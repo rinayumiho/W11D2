@@ -1,6 +1,7 @@
 // error handling is better
 export const RECEIVE_TODOS = "RECEIVE_TODOS";
 export const RECEIVE_TODO = "RECEIVE_TODO";
+export const REMOVE_TODO = "REMOVE_TODO";
 
 export const receiveTodos = (todos) => { // todos will be passed in as an array
 	return {
@@ -18,18 +19,10 @@ export const receiveTodo = (todo) => {
 	}
 }
 
-
-// {
-//   1: {
-//     id: 1,
-//     title: 'wash car',
-//     body: 'with soap',
-//     done: false
-//   },
-//   2: {
-//     id: 2,
-//     title: 'wash dog',
-//     body: 'with shampoo',
-//     done: true
-//   },
-// }
+export const removeTodo = (todo) => {
+	return {
+		type: REMOVE_TODO,
+		todo
+		//todo: todo
+	}
+}
