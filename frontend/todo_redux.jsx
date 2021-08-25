@@ -1,6 +1,7 @@
 import configureStore from "./store/store";
 import { receiveTodos, receiveTodo, removeTodo } from "./actions/todo_actions";
 import { receiveSteps, receiveStep, removeStep } from "./actions/step_actions";
+import { allToDos } from "./reducers/selectors";
 // need to remember to import
 import ReactDOM from "react-dom";
 import React from "react";
@@ -19,8 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.receiveStep = receiveStep;
     window.removeStep = removeStep;
 
+    window.allToDos = allToDos;
+
     const rootElement = document.getElementById("rootElement");
     ReactDOM.render(<Root store={store}/>, rootElement);
+
 });
   
 

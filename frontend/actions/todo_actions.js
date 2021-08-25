@@ -4,6 +4,7 @@ export const RECEIVE_TODO = "RECEIVE_TODO";
 export const REMOVE_TODO = "REMOVE_TODO";
 
 export const receiveTodos = (todos) => { // todos will be passed in as an array
+	//debugger
 	return {
 		type: RECEIVE_TODOS,
 		todos
